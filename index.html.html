@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bayern Munich DNA | History, Tactics, Stats &amp; Match Centre</title>
+    <meta name="description" content="The ultimate independent Bayern Munich fan media platform. Interactive match centre, 2D formation builder, transfer radar, trivia quiz, podcast player, videos, and all-time records.">
+    <link rel="canonical" href="https://bayernmunichdna.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bayern Munich DNA | Ultimate Fan Media Platform">
+    <meta property="og:description" content="Where Bayern history, tactics, and stories live. Interactive Match Centre, Build Your XI, Transfer Radar, Podcast Player, Trivia Quiz, and Hall of Fame.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- LUXURY OBSIDIAN THEME VARIABLES --- */
+        :root {
+            --brand-red: #DC052D; --brand-red-bright: #FF1E42; --brand-navy: #0066B2;
+            --brand-gold: #E5B84B; --brand-green: #10B981; --brand-cyan: #06B6D4; --brand-purple: #8B5CF6;
+            --bg-main: #07070C; --bg-secondary: #0D0D15; --bg-card: #13131E; --bg-elevated: #1B1B2A;
+            --text-main: #F8F8FA; --text-muted: #9494A8;
+            --border-color: rgba(255, 255, 255, 0.08); --border-highlight: rgba(255, 255, 255, 0.15);
+            --glow-shadow: rgba(220, 5, 45, 0.32); --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+            --specular: inset 0 1px 0 0 rgba(255, 255, 255, 0.08); --nav-bg: rgba(7, 7, 12, 0.88);
+        }
+        [data-theme="light"] {
+            --bg-main: #F5F6FA; --bg-secondary: #FFFFFF; --bg-card: #FFFFFF; --bg-elevated: #EEF0F7;
+            --text-main: #0B0B14; --text-muted: #56566B;
+            --border-color: rgba(11, 11, 20, 0.09); --border-highlight: rgba(11, 11, 20, 0.16);
+            --glow-shadow: rgba(220, 5, 45, 0.18); --card-shadow: 0 15px 35px rgba(11, 11, 20, 0.06);
+            --specular: inset 0 1px 0 0 rgba(255, 255, 255, 0.8); --nav-bg: rgba(245, 246, 250, 0.9);
+        }
+
+        /* --- BASE & RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 84px; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg-main); color: var(--text-main); line-height: 1.65; transition: background 0.3s, color 0.3s; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; text-transform: uppercase; line-height: 1.08; letter-spacing: 0.02em; }
+        a { text-decoration: none; color: inherit; transition: all 0.25s ease; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        button, input, textarea { font-family: inherit; }
+
+        /* --- UTILITIES --- */
+        .container { max-width: 1220px; margin: 0 auto; padding: 0 4%; }
+        .section-padding { padding: 5.5rem 0; }
+        .text-red { color: var(--brand-red); }
+        .text-gold { color: var(--brand-gold); }
+        .text-center { text-align: center; }
+        .eyebrow { font-family: 'Oswald', sans-serif; font-size: 0.8rem; color: var(--brand-red); letter-spacing: 0.22em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0.65rem; font-weight: 600; padding: 0.25rem 0.85rem; border-radius: 999px; background: rgba(220, 5, 45, 0.1); border: 1px solid rgba(220, 5, 45, 0.25); }
+        .section-title { font-size: clamp(2.2rem, 5vw, 3.3rem); margin-bottom: 0.8rem; letter-spacing: 0.03em; }
+        .section-desc { color: var(--text-muted); max-width: 650px; margin: 0 auto 2.8rem; font-size: 1.04rem; }
+
+        /* --- BUTTONS --- */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.8rem 1.65rem; font-weight: 600; text-transform: uppercase; font-family: 'Oswald', sans-serif; letter-spacing: 1.1px; font-size: 0.92rem; cursor: pointer; transition: all 0.25s ease; border: 1px solid transparent; border-radius: 999px; }
+        .btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .btn-primary { background: linear-gradient(135deg, var(--brand-red-bright) 0%, var(--brand-red) 100%); color: #fff; box-shadow: 0 8px 25px -4px var(--glow-shadow), inset 0 1px 0 rgba(255,255,255,0.25); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px -4px rgba(220, 5, 45, 0.6); }
+        .btn-outline { background: var(--bg-card); border-color: var(--border-highlight); color: var(--text-main); box-shadow: var(--specular); }
+        .btn-outline:hover { border-color: var(--brand-red); color: var(--brand-red); transform: translateY(-3px); }
+
+        .animate-on-scroll { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+
+        /* --- NAVBAR --- */
+        header { position: fixed; top: 0; left: 0; width: 100%; background: var(--nav-bg); backdrop-filter: blur(18px); z-index: 1000; border-bottom: 1px solid var(--border-color); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 76px; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.7rem; font-weight: 700; letter-spacing: 1.5px; }
+        .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+        .nav-links a:not(.btn) { font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+        .nav-links a:not(.btn):hover { color: var(--text-main); }
+        .nav-actions { display: flex; align-items: center; gap: 0.65rem; }
+        .theme-toggle { background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); cursor: pointer; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.25s; }
+        .theme-toggle:hover { border-color: var(--brand-red); transform: rotate(15deg); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-main); font-size: 1.6rem; cursor: pointer; }
+        @media (max-width: 1100px) {
+            .nav-links { position: absolute; top: 76px; left: -100%; width: 100%; background: var(--bg-secondary); flex-direction: column; padding: 2rem 0; transition: left 0.3s ease; border-bottom: 1px solid var(--border-color); }
+            .nav-links.active { left: 0; }
+            .mobile-menu-btn { display: block; }
+            .subscribe-btn-nav { display: none; }
+        }
+
+        /* --- HERO --- */
+        .hero { padding: 155px 0 80px; background: radial-gradient(950px 460px at 80% -5%, rgba(220, 5, 45, 0.28), transparent 65%), radial-gradient(750px 420px at 10% 95%, rgba(0, 102, 178, 0.2), transparent 65%); text-align: center; position: relative; overflow: hidden; }
+        .hero-pill { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.45rem 1.2rem; border-radius: 999px; background: var(--bg-card); border: 1px solid var(--border-highlight); font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 1.5rem; box-shadow: var(--specular); }
+        .live-dot { width: 8px; height: 8px; background: var(--brand-red); border-radius: 50%; animation: pulse-dot 1.5s infinite; display: inline-block; }
+        @keyframes pulse-dot { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 5, 45, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(220, 5, 45, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 5, 45, 0); } }
+        .hero h1 { font-size: clamp(3.3rem, 9vw, 6.6rem); margin-bottom: 1rem; }
+        .hero h1 span { background: linear-gradient(135deg, #FF2A4B 0%, #DC052D 60%, #E5B84B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); margin-bottom: 2.2rem; max-width: 650px; margin-inline: auto; }
+        .hero-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .stat-strip { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; padding: 1.85rem; background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secondary) 100%); border-radius: 20px; border: 1px solid var(--border-highlight); box-shadow: var(--card-shadow), var(--specular); }
+        .stat-item { text-align: center; padding: 0.4rem; border-right: 1px solid var(--border-color); }
+        .stat-item:last-child { border-right: none; }
+        @media (max-width: 768px) { .stat-item { border-right: none; } }
+        .stat-number { font-family: 'Oswald', sans-serif; font-size: 3.1rem; color: var(--brand-red); font-weight: 700; line-height: 1; }
+        .stat-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 0.4rem; font-weight: 600; }
+        .stat-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.85rem; opacity: 0.75; }
+
+        /* --- MATCH CENTRE, FAN POLL & 2D PITCH --- */
+        .live-match-section { background: radial-gradient(850px 420px at 10% 15%, rgba(220, 5, 45, 0.11), transparent 70%), radial-gradient(850px 420px at 90% 85%, rgba(0, 102, 178, 0.11), transparent 70%), var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .next-match-banner { display: grid; grid-template-columns: 1.35fr auto; gap: 2rem; align-items: center; background: linear-gradient(135deg, rgba(220, 5, 45, 0.14) 0%, var(--bg-card) 48%, rgba(0, 102, 178, 0.14) 100%); border: 1px solid var(--border-highlight); border-left: 5px solid var(--brand-red); border-radius: 20px; padding: 1.85rem 2rem; margin-bottom: 1.5rem; box-shadow: var(--card-shadow), var(--specular); }
+        .next-match-info h3 { font-size: 2.1rem; margin: 0.3rem 0; }
+        .next-match-meta { color: var(--text-muted); font-size: 0.88rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+        .prob-bar { display: flex; height: 8px; border-radius: 99px; overflow: hidden; margin: 0.9rem 0 0.45rem; background: var(--bg-main); max-width: 460px; gap: 3px; padding: 1px; }
+        .prob-bar i { display: block; height: 100%; border-radius: 99px; }
+        .prob-legend { display: flex; gap: 1.1rem; font-size: 0.76rem; font-weight: 600; flex-wrap: wrap; color: var(--text-muted); }
+        .prob-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        .countdown-grid { display: flex; gap: 0.7rem; }
+        .cd-box { text-align: center; min-width: 68px; padding: 0.8rem 0.6rem; border-radius: 14px; background: var(--bg-main); border: 1px solid var(--border-highlight); box-shadow: var(--specular); }
+        .cd-box b { display: block; font-family: 'Oswald', sans-serif; font-size: 2rem; color: var(--brand-gold); line-height: 1; }
+        .cd-box small { color: var(--text-muted); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-top: 4px; display: block; }
+
+        .fan-poll-card { background: var(--bg-card); border: 1px solid var(--border-highlight); border-radius: 16px; padding: 1.25rem 1.6rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; box-shadow: var(--specular); }
+        .poll-options { display: flex; gap: 0.75rem; flex: 1; min-width: 280px; flex-wrap: wrap; }
+        .poll-btn { flex: 1; min-width: 140px; padding: 0.65rem 1rem; border-radius: 10px; border: 1px solid var(--border-highlight); background: var(--bg-main); color: var(--text-main); cursor: pointer; font-weight: 600; font-size: 0.84rem; position: relative; overflow: hidden; transition: border-color 0.2s; text-align: left; display: flex; justify-content: space-between; align-items: center; }
+        .poll-btn:hover { border-color: var(--brand-red); }
+        .poll-btn .poll-fill { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(220, 5, 45, 0.24); width: 0%; transition: width 0.6s ease; z-index: 1; }
+        .poll-btn span { position: relative; z-index: 2; }
+        .poll-pct { color: var(--brand-gold); font-family: 'Oswald', sans-serif; font-size: 1rem; }
+
+        .snapshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2.2rem; }
+        .snap-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem 1rem; text-align: center; position: relative; overflow: hidden; box-shadow: var(--specular); transition: transform 0.25s; }
+        .snap-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--snap-accent, var(--brand-red)); }
+        .snap-card:hover { transform: translateY(-4px); }
+        .snap-card b { display: block; font-family: 'Oswald', sans-serif; font-size: 2.3rem; color: var(--snap-accent, var(--brand-red)); line-height: 1.1; }
+        .snap-card span { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+
+        .match-centre-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2rem; align-items: start; }
+        @media (max-width: 980px) { .next-match-banner, .match-centre-grid { grid-template-columns: 1fr; } }
+
+        .match-card, .centre-panel { background: var(--bg-card); border: 1px solid var(--border-highlight); border-radius: 20px; overflow: hidden; box-shadow: var(--card-shadow), var(--specular); }
+        .centre-panel { padding: 1.5rem; }
+        .match-header { background: linear-gradient(90deg, rgba(220, 5, 45, 0.18), rgba(0, 102, 178, 0.18)); padding: 0.95rem 1.4rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .comp-pill { padding: 0.25rem 0.7rem; border-radius: 6px; background: var(--brand-navy); color: #fff; font-size: 0.7rem; }
+        .comp-pill.BL { background: var(--brand-red); }
+        .status-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.75rem; border-radius: 99px; background: rgba(16, 185, 129, 0.16); color: var(--brand-green); font-size: 0.72rem; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        .match-scoreboard { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 2rem 1.25rem; text-align: center; background: radial-gradient(circle at 20% 50%, rgba(220, 5, 45, 0.16), transparent 55%), radial-gradient(circle at 80% 50%, rgba(0, 102, 178, 0.16), transparent 55%); border-bottom: 1px solid var(--border-color); }
+        .team-box { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+        .team-crest { width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.15rem; color: #fff; border: 2px solid rgba(255,255,255,0.28); }
+        .crest-fcb { background: linear-gradient(135deg, #FF1E42, #99021E); }
+        .crest-opp { background: linear-gradient(135deg, #0077CC, #003B66); }
+        .team-name { font-family: 'Oswald', sans-serif; font-size: 1.4rem; }
+        .team-sub { font-size: 0.74rem; color: var(--text-muted); }
+        .score-box { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; margin: 0 0.65rem; }
+        .match-score { font-family: 'Oswald', sans-serif; font-size: 3rem; padding: 0.15rem 1.35rem; background: var(--bg-main); border-radius: 14px; border: 1px solid var(--border-highlight); }
+        .xg-pill { font-size: 0.72rem; font-weight: 700; color: var(--brand-gold); background: rgba(229, 184, 75, 0.12); padding: 2px 11px; border-radius: 99px; border: 1px solid rgba(229, 184, 75, 0.3); }
+
+        .inspector-tabs { display: grid; grid-template-columns: repeat(2, 1fr); background: var(--bg-main); border-bottom: 1px solid var(--border-color); }
+        .insp-tab { padding: 0.9rem; background: none; border: none; border-bottom: 3px solid transparent; color: var(--text-muted); font-family: 'Oswald', sans-serif; font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: all 0.2s; }
+        .insp-tab.active { color: var(--brand-red); border-bottom-color: var(--brand-red); background: linear-gradient(to top, rgba(220, 5, 45, 0.12), transparent); }
+        .inspector-body { padding: 1.5rem; min-height: 360px; }
+
+        .cmp-item { margin-bottom: 0.95rem; }
+        .cmp-labels { display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 0.3rem; font-weight: 700; }
+        .cmp-labels span { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
+        .cmp-bar { display: flex; gap: 5px; height: 8px; border-radius: 99px; overflow: hidden; background: var(--bg-main); padding: 1px; }
+        .cmp-bar i { display: block; border-radius: 99px; }
+        .scorers-summary { margin-top: 1rem; padding: 0.7rem 0.95rem; border-radius: 10px; background: var(--bg-main); border: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-muted); }
+        .mvp-strip { margin-top: 0.85rem; padding: 0.85rem 1.1rem; border-radius: 12px; background: linear-gradient(135deg, rgba(229, 184, 75, 0.14), rgba(220, 5, 45, 0.1)); border: 1px solid rgba(229, 184, 75, 0.3); display: flex; justify-content: space-between; align-items: center; }
+        .mvp-rating-pill { font-family: 'Oswald', sans-serif; font-size: 1.45rem; color: var(--brand-gold); background: rgba(0,0,0,0.35); padding: 0.15rem 0.7rem; border-radius: 8px; font-weight: 700; }
+
+        .pitch-controls { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
+        .formation-btns { display: flex; gap: 0.4rem; }
+        .form-btn { padding: 0.3rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-highlight); background: var(--bg-main); color: var(--text-muted); font-family: 'Oswald', sans-serif; font-size: 0.8rem; cursor: pointer; }
+        .form-btn.active { background: var(--brand-red); color: #fff; border-color: var(--brand-red); }
+        .tactical-pitch { position: relative; width: 100%; height: 330px; border-radius: 14px; overflow: hidden; background: repeating-linear-gradient(0deg, #135C30 0px, #135C30 33px, #176937 33px, #176937 66px); border: 2px solid rgba(255,255,255,0.35); box-shadow: inset 0 0 35px rgba(0,0,0,0.5); }
+        .pitch-line-half { position: absolute; top: 50%; left: 0; right: 0; height: 1.5px; background: rgba(255,255,255,0.35); }
+        .pitch-circle { position: absolute; top: 50%; left: 50%; width: 72px; height: 72px; border: 1.5px solid rgba(255,255,255,0.35); border-radius: 50%; transform: translate(-50%, -50%); }
+        .pitch-box-top { position: absolute; top: 0; left: 50%; width: 145px; height: 46px; border: 1.5px solid rgba(255,255,255,0.35); border-top: none; transform: translateX(-50%); }
+        .pitch-box-bot { position: absolute; bottom: 0; left: 50%; width: 145px; height: 46px; border: 1.5px solid rgba(255,255,255,0.35); border-bottom: none; transform: translateX(-50%); }
+        .pitch-player { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; cursor: pointer; z-index: 3; transition: left 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.2s; }
+        .pitch-player:hover { transform: translate(-50%, -50%) scale(1.15); z-index: 5; }
+        .player-dot { width: 32px; height: 32px; border-radius: 50%; background: var(--brand-red); border: 2px solid #fff; color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,0.5); position: relative; }
+        .player-rating { position: absolute; top: -6px; right: -10px; background: var(--brand-gold); color: #000; font-size: 0.58rem; font-weight: 800; padding: 1px 4px; border-radius: 4px; font-family: 'Inter', sans-serif; }
+        .cap-badge { position: absolute; bottom: -5px; left: -8px; background: #10B981; color: #fff; font-size: 0.55rem; font-weight: 800; padding: 1px 4px; border-radius: 3px; font-family: 'Inter', sans-serif; }
+        .player-label { margin-top: 3px; background: rgba(7, 7, 12, 0.88); color: #fff; font-size: 0.66rem; font-weight: 600; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+
+        .fixture-row { display: grid; grid-template-columns: 74px 1fr auto; gap: 0.85rem; align-items: center; padding: 0.8rem; border-bottom: 1px solid var(--border-color); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
+        .fixture-row:last-child { border-bottom: none; }
+        .fixture-row:hover { background: var(--bg-elevated); transform: translateX(4px); }
+        .fixture-row.selected-match { background: rgba(220, 5, 45, 0.14); border-left: 3px solid var(--brand-red); }
+        .fixture-date { font-size: 0.72rem; color: var(--text-muted); line-height: 1.3; }
+        .comp-mini { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 0.63rem; font-weight: 700; color: #fff; background: var(--brand-red); margin-top: 3px; }
+        .comp-mini.UCL { background: var(--brand-navy); }
+        .comp-mini.DFB { background: var(--brand-gold); color: #000; }
+        .fixture-teams { font-weight: 600; font-size: 0.92rem; }
+        .badge-res { font-size: 0.66rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-left: 6px; display: inline-block; }
+        .badge-res.W { background: rgba(16, 185, 129, 0.2); color: var(--brand-green); }
+        .badge-res.D { background: rgba(229, 184, 75, 0.2); color: var(--brand-gold); }
+        .badge-res.L { background: rgba(220, 5, 45, 0.2); color: var(--brand-red); }
+        .score-pill { font-family: 'Oswald', sans-serif; font-size: 1.25rem; padding: 0.15rem 0.75rem; border-radius: 8px; background: var(--bg-main); border: 1px solid var(--border-color); }
+
+        /* --- TRANSFER RADAR, PODCAST, QUIZ & VAULT --- */
+        .transfer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.35rem; }
+        .transfer-card { background: var(--bg-card); border: 1px solid var(--border-highlight); border-radius: 16px; padding: 1.4rem; box-shadow: var(--specular); display: flex; flex-direction: column; gap: 0.75rem; transition: transform 0.25s, border-color 0.25s; }
+        .transfer-card:hover { transform: translateY(-5px); border-color: var(--brand-red); }
+        .tr-top { display: flex; justify-content: space-between; align-items: center; }
+        .tr-status { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 9px; border-radius: 99px; }
+        .tr-status.locked { background: rgba(16, 185, 129, 0.16); color: var(--brand-green); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .tr-status.talks { background: rgba(229, 184, 75, 0.16); color: var(--brand-gold); border: 1px solid rgba(229, 184, 75, 0.3); }
+        .tr-status.target { background: rgba(6, 182, 212, 0.16); color: var(--brand-cyan); border: 1px solid rgba(6, 182, 212, 0.3); }
+        .tr-name { font-size: 1.4rem; }
+        .tr-meta { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted); padding-top: 0.65rem; border-top: 1px solid var(--border-color); }
+
+        .fanzone-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 2rem; align-items: stretch; }
+        @media (max-width: 960px) { .fanzone-grid { grid-template-columns: 1fr; } }
+        .podcast-card, .quiz-card { background: var(--bg-card); border: 1px solid var(--border-highlight); border-radius: 20px; padding: 2rem; box-shadow: var(--card-shadow), var(--specular); display: flex; flex-direction: column; }
+        .pod-header { display: flex; gap: 1.15rem; align-items: center; margin-bottom: 1.4rem; }
+        .pod-art { width: 72px; height: 72px; border-radius: 16px; background: linear-gradient(135deg, var(--brand-red), #5A0112); display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700; color: #fff; flex-shrink: 0; box-shadow: 0 10px 25px var(--glow-shadow); }
+        .pod-controls { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; background: var(--bg-main); padding: 0.9rem 1.15rem; border-radius: 14px; border: 1px solid var(--border-color); }
+        .pod-play-btn { width: 44px; height: 44px; border-radius: 50%; background: var(--brand-red); color: #fff; border: none; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .pod-progress-wrap { flex: 1; cursor: pointer; }
+        .pod-bar-bg { width: 100%; height: 6px; background: var(--border-highlight); border-radius: 99px; overflow: hidden; margin-bottom: 0.35rem; }
+        .pod-bar-fill { height: 100%; width: 32%; background: linear-gradient(90deg, var(--brand-red), var(--brand-gold)); border-radius: 99px; transition: width 0.2s; }
+        .pod-time { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); }
+        .ep-list { display: flex; flex-direction: column; gap: 0.55rem; margin-top: auto; }
+        .ep-item { padding: 0.7rem 0.9rem; border-radius: 10px; background: var(--bg-main); border: 1px solid var(--border-color); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; transition: border-color 0.2s; }
+        .ep-item.active, .ep-item:hover { border-color: var(--brand-red); color: var(--brand-gold); }
+
+        .quiz-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.82rem; color: var(--text-muted); font-weight: 600; }
+        .quiz-question { font-size: 1.35rem; margin-bottom: 1.2rem; line-height: 1.25; }
+        .quiz-options { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.2rem; }
+        .quiz-opt { padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border-highlight); background: var(--bg-main); color: var(--text-main); text-align: left; cursor: pointer; font-weight: 500; font-size: 0.9rem; transition: all 0.2s; }
+        .quiz-opt:hover:not(:disabled) { border-color: var(--brand-gold); transform: translateX(4px); }
+        .quiz-opt.correct { background: rgba(16, 185, 129, 0.2); border-color: var(--brand-green); color: var(--brand-green); font-weight: 700; }
+        .quiz-opt.wrong { background: rgba(220, 5, 45, 0.2); border-color: var(--brand-red); color: var(--brand-red); }
+        .quiz-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+
+        .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; }
+        .vault-card { border-radius: 18px; overflow: hidden; border: 1px solid var(--border-highlight); background: var(--bg-card); box-shadow: var(--card-shadow); display: flex; flex-direction: column; }
+        .vault-preview { height: 260px; padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; color: #fff; }
+        .vault-preview::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
+        .vault-preview > * { position: relative; z-index: 2; }
+        .vault-info { padding: 1.35rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+
+        /* --- PILLARS, HISTORY, VIDEOS, STORIES, OTD, TOP 10 --- */
+        .filter-tabs { display: flex; justify-content: center; gap: 0.6rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
+        .filter-tab { background: var(--bg-main); border: 1px solid var(--border-highlight); color: var(--text-muted); padding: 0.5rem 1.2rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; transition: all 0.25s; }
+        .filter-tab.active, .filter-tab:hover { background: var(--brand-red); color: #fff; border-color: var(--brand-red); box-shadow: 0 6px 18px var(--glow-shadow); }
+        .pillars-grid, .history-timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.75rem; }
+        .pillar-card { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secondary) 100%); padding: 2.3rem 1.8rem; border-radius: 18px; border: 1px solid var(--border-highlight); box-shadow: var(--card-shadow), var(--specular); text-align: center; transition: transform 0.3s, border-color 0.3s; }
+        .pillar-card:hover { transform: translateY(-7px); border-color: var(--brand-red); }
+        .pillar-icon { width: 44px; height: 44px; color: var(--brand-red); margin: 0 auto 1rem; }
+        .pillar-card h3 { font-size: 1.45rem; margin-bottom: 0.65rem; }
+        .pillar-card p { color: var(--text-muted); font-size: 0.94rem; }
+
+        .history-timeline-card { position: relative; padding: 2.4rem 1.85rem; border-radius: 18px; border: 1px solid var(--border-highlight); border-top: 4px solid var(--brand-red); overflow: hidden; background-size: cover; background-position: center; box-shadow: var(--card-shadow); transition: transform 0.3s; }
+        .history-timeline-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(7, 7, 12, 0.8), rgba(7, 7, 12, 0.96)); z-index: 1; }
+        .history-timeline-card > * { position: relative; z-index: 2; }
+        .history-timeline-card:hover { transform: translateY(-7px); }
+        .history-era { font-family: 'Oswald', sans-serif; font-size: 0.85rem; color: var(--brand-gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.45rem; display: block; }
+        .history-timeline-card h3 { font-size: 1.45rem; margin-bottom: 0.75rem; color: #fff; }
+        .history-timeline-card p { color: #D4D4DF; font-size: 0.93rem; }
+
+        .video-grid, .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.85rem; }
+        .video-card, .story-card { background: var(--bg-card); border-radius: 18px; overflow: hidden; border: 1px solid var(--border-highlight); box-shadow: var(--card-shadow), var(--specular); cursor: pointer; transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; }
+        .video-card:hover, .story-card:hover { transform: translateY(-6px); border-color: var(--brand-red); }
+        .video-thumbnail { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; }
+        .video-thumbnail img, .story-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .video-card:hover .video-thumbnail img, .story-card:hover .story-img img { transform: scale(1.06); }
+        .play-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+        .video-card:hover .play-overlay { opacity: 1; }
+        .play-btn { width: 54px; height: 54px; background: var(--brand-red); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px var(--brand-red); }
+        .play-btn svg { width: 22px; height: 22px; fill: white; margin-left: 3px; }
+        .video-info, .story-content { padding: 1.4rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .video-title { font-size: 1.25rem; margin-bottom: 0.4rem; }
+        .video-meta { color: var(--text-muted); font-size: 0.84rem; }
+        .story-img { height: 200px; overflow: hidden; }
+        .story-tag { font-size: 0.72rem; font-weight: 700; color: var(--brand-red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .story-title { font-size: 1.4rem; margin-bottom: 0.9rem; }
+        .story-meta { margin-top: auto; color: var(--text-muted); font-size: 0.84rem; display: flex; justify-content: space-between; padding-top: 0.9rem; border-top: 1px solid var(--border-color); }
+
+        .otd-section { background: linear-gradient(135deg, #B80424 0%, #DC052D 50%, #7A0218 100%); color: white; padding: 4.2rem 0; text-align: center; }
+        .otd-box { max-width: 820px; margin: 0 auto; padding: 2.5rem 2rem; background: rgba(7, 7, 12, 0.32); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.22); }
+        .otd-title { font-size: 1.05rem; margin-bottom: 0.8rem; color: var(--brand-gold); letter-spacing: 0.16em; }
+        .otd-fact { font-family: 'Oswald', sans-serif; font-size: clamp(1.45rem, 3.5vw, 2.1rem); line-height: 1.3; margin-bottom: 1.5rem; }
+        .otd-btn { background: #fff; color: var(--brand-red); border: none; padding: 0.6rem 1.45rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: 700; border-radius: 999px; cursor: pointer; }
+
+        .top10-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 0.95rem; max-width: 1060px; margin: 0 auto; }
+        @media (max-width: 600px) { .top10-list { grid-template-columns: 1fr; } }
+        .top10-row { display: grid; grid-template-columns: 42px 1fr auto; gap: 1rem; align-items: center; padding: 1rem 1.35rem; border-radius: 14px; background: var(--bg-card); border: 1px solid var(--border-highlight); position: relative; overflow: hidden; box-shadow: var(--specular); }
+        .top10-fill { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, rgba(220, 5, 45, 0.25), transparent); width: 0; transition: width 0.85s ease; z-index: 1; }
+        .top10-row > *:not(.top10-fill) { position: relative; z-index: 2; }
+        .top10-rank { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--text-muted); font-weight: 700; text-align: center; }
+        .top10-row.rank-1 .top10-rank, .top10-row.rank-2 .top10-rank, .top10-row.rank-3 .top10-rank { color: var(--brand-gold); }
+        .top10-player b { font-size: 1.02rem; display: block; }
+        .top10-player small { color: var(--text-muted); font-size: 0.76rem; }
+        .top10-val { font-family: 'Oswald', sans-serif; font-size: 1.8rem; color: var(--brand-red); font-weight: 700; }
+        .top10-note { text-align: center; color: var(--text-muted); font-size: 0.84rem; margin-top: 1.65rem; max-width: 760px; margin-inline: auto; }
+
+        .newsletter-section { background: radial-gradient(700px 350px at 50% 50%, rgba(220, 5, 45, 0.12), transparent 70%), var(--bg-secondary); text-align: center; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .newsletter-form { max-width: 520px; margin: 1.8rem auto 0; display: flex; gap: 0.65rem; }
+        .newsletter-form input { flex: 1; padding: 0.9rem 1.2rem; border: 1px solid var(--border-highlight); border-radius: 999px; background: var(--bg-main); color: var(--text-main); outline: none; }
+        @media (max-width: 600px) { .newsletter-form { flex-direction: column; } }
+        .about-contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3.5rem; }
+        .contact-form { display: flex; flex-direction: column; gap: 0.9rem; }
+        .contact-form input, .contact-form textarea { padding: 0.95rem 1.15rem; border: 1px solid var(--border-highlight); border-radius: 12px; background: var(--bg-card); color: var(--text-main); outline: none; }
+        .contact-form textarea { resize: vertical; min-height: 115px; }
+        .toast { position: fixed; bottom: 28px; right: 28px; background: #10B981; color: white; padding: 0.95rem 1.45rem; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.4); font-weight: 600; text-transform: uppercase; font-family: 'Oswald', sans-serif; letter-spacing: 1px; z-index: 2000; transform: translateY(100px); opacity: 0; transition: all 0.35s; }
+        .toast.show { transform: translateY(0); opacity: 1; }
+
+        footer { background: var(--bg-secondary); padding: 4rem 0 2rem; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.5rem; }
+        .footer-brand { max-width: 340px; }
+        .footer-logo { font-family: 'Oswald', sans-serif; font-size: 1.65rem; margin-bottom: 0.75rem; display: block; font-weight: 700; }
+        .social-icons { display: flex; gap: 1rem; margin-top: 1.25rem; }
+        .social-icons a { color: var(--text-muted); transition: color 0.2s, transform 0.2s; }
+        .social-icons a:hover { color: var(--brand-red); transform: translateY(-3px); }
+        .social-icons svg { width: 22px; height: 22px; fill: currentColor; }
+        .footer-links h4 { margin-bottom: 1rem; font-size: 1.1rem; }
+        .footer-links ul { display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--text-main); }
+        .footer-bottom { text-align: center; padding-top: 1.75rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <div class="toast" id="toastNotification">Action Successful!</div>
+
+    <!-- 1. STICKY NAVBAR -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">BAYERN <span class="text-red">DNA</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#live-match">Match Centre</a>
+                <a href="#tactics">Tactics</a>
+                <a href="#transfers">Squad Radar</a>
+                <a href="#fanzone">Podcast &amp; Quiz</a>
+                <a href="#vault">4K Vault</a>
+                <a href="#history">History</a>
+                <a href="#videos">Videos</a>
+                <a href="#stories">Stories</a>
+                <a href="#stats">Top 10</a>
+                <a href="#about">About</a>
+                <a href="#newsletter" class="btn btn-primary subscribe-btn-nav" style="padding: 0.4rem 1.1rem; font-size: 0.8rem;">Subscribe</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">◐</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO -->
+        <section class="hero">
+            <div class="container animate-on-scroll">
+                <div class="hero-pill">
+                    <span class="live-dot"></span>
+                    <span>2026/27 Season • Matchday Data Updated 19 Oct 2026</span>
+                </div>
+                <h1>The Heartbeat of <br><span>Bayern History</span></h1>
+                <p>Where tactics, legends, and unforgettable stories live. The definitive independent football media hub crafted for die-hard Mia San Mia supporters.</p>
+                <div class="hero-buttons">
+                    <a href="https://youtube.com/channel/UCqn41D9EP0SOvKpFWnCbB6A" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        Watch on YouTube
+                    </a>
+                    <a href="https://x.com/BayernMunichDNA" target="_blank" rel="noopener" class="btn btn-outline">
+                        <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        Follow on X
+                    </a>
+                </div>
+
+                <div class="stat-strip">
+                    <div class="stat-item"><div class="stat-number" data-target="35">0</div><div class="stat-label">Bundesliga Titles</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="21">0</div><div class="stat-label">DFB-Pokal Titles</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="6">0</div><div class="stat-label">Champions League</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="2">0</div><div class="stat-label">Club World Cups</div></div>
+                </div>
+                <div class="stat-note">*Major honours accurate through the 2025/26 domestic double campaign.</div>
+            </div>
+        </section>
+
+        <!-- 3. MATCH CENTRE, FAN POLL & INTERACTIVE 2D PITCH BUILDER -->
+        <section id="live-match" class="section-padding live-match-section">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Matchday Live Hub</span>
+                    <h2 class="section-title">Match Centre &amp; Tactical Sandbox</h2>
+                    <p class="section-desc">Updated through Matchday 6 (Bayern 6–1 RB Leipzig). Vote in the live matchday poll, inspect match metrics, or test formations in the 2D Pitch Builder.</p>
+                </div>
+
+                <div class="next-match-banner animate-on-scroll" id="nextMatchBanner"></div>
+
+                <!-- Live Matchday Fan Poll Widget -->
+                <div class="fan-poll-card animate-on-scroll">
+                    <div>
+                        <span style="font-size:0.72rem; font-weight:700; color:var(--brand-gold); text-transform:uppercase; letter-spacing:1px;">🗳️ Live Community Match Poll</span>
+                        <h4 style="font-size:1.3rem; margin-top:2px;">How will Bayern fare against Arsenal at the Allianz Arena?</h4>
+                    </div>
+                    <div class="poll-options" id="pollContainer"></div>
+                </div>
+
+                <!-- 2026/27 Season Snapshot Strip -->
+                <div class="snapshot-grid animate-on-scroll" id="seasonSnapshot"></div>
+                
+                <!-- 2-Column Match Inspector & Fixtures -->
+                <div class="match-centre-grid animate-on-scroll">
+                    <div class="match-card">
+                        <div class="match-header">
+                            <span id="inspCompBadge" class="comp-pill BL">Bundesliga • Home</span>
+                            <span id="inspDateText" style="color: var(--text-muted);">Sat, 17 Oct 2026</span>
+                            <span class="status-pill"><span class="live-dot" style="background:var(--brand-green);"></span> FULL TIME</span>
+                        </div>
+                        <div class="match-scoreboard" id="inspScoreboard"></div>
+                        <div class="inspector-tabs" id="inspectorTabs">
+                            <button class="insp-tab active" data-view="stats">📊 Match Stats &amp; xG</button>
+                            <button class="insp-tab" data-view="pitch">📋 Build Your XI Sandbox</button>
+                        </div>
+                        <div class="inspector-body" id="inspectorBody"></div>
+                    </div>
+
+                    <div class="centre-panel">
+                        <div class="filter-tabs" id="centreTabs" style="justify-content: flex-start; margin-bottom: 1rem;">
+                            <button class="filter-tab active" data-panel="res">⚽ Results (Click to Inspect)</button>
+                            <button class="filter-tab" data-panel="fix">📅 Upcoming Fixtures</button>
+                        </div>
+                        <div id="centrePanelBody"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CONTENT PILLARS ("WHAT WE COVER") -->
+        <section id="tactics" class="section-padding">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Core Coverage</span>
+                    <h2 class="section-title">What We Cover</h2>
+                    <p class="section-desc">We go beyond the daily news cycle to bring you deep-dives into the core of the club.</p>
+                </div>
+                <div class="pillars-grid animate-on-scroll">
+                    <div class="pillar-card">
+                        <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        <h3>Bayern History</h3>
+                        <p>From café dissidents and Nazi-era resistance to the Golden Axis, FC Hollywood drama, and modern trebles.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <h3>Tactical Breakdowns</h3>
+                        <p>Chalkboard analysis of Vincent Kompany's high-octane pressing systems and historical managerial eras.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3>Player Stories</h3>
+                        <p>From local Bavarian icons like Thomas Müller to modern superstars shaping the Allianz Arena era.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        <h3>Stats &amp; Records</h3>
+                        <p>Deep dives into the data, xG models, and all-time milestones that define Germany's record champions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SQUAD CONTRACT & TRANSFER RADAR -->
+        <section id="transfers" class="section-padding" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Squad Architecture</span>
+                    <h2 class="section-title">Contract &amp; Transfer Radar</h2>
+                    <p class="section-desc">Tracking key contract extensions, long-term pillars, and verified squad statuses across Säbener Straße.</p>
+                </div>
+                <div class="transfer-grid animate-on-scroll" id="transferGrid"></div>
+            </div>
+        </section>
+
+        <!-- 6. PODCAST AUDIO PLAYER & TRIVIA QUIZ ENGINE -->
+        <section id="fanzone" class="section-padding">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Interactive Fan Zone</span>
+                    <h2 class="section-title">DNA Audio &amp; History Trivia</h2>
+                    <p class="section-desc">Listen to our latest tactical breakdowns while testing your knowledge of FC Bayern lore.</p>
+                </div>
+                <div class="fanzone-grid animate-on-scroll">
+                    <div class="podcast-card">
+                        <div class="pod-header">
+                            <div class="pod-art">DNA<br>POD</div>
+                            <div>
+                                <span style="font-size:0.72rem; font-weight:700; color:var(--brand-red); text-transform:uppercase; letter-spacing:1px;">🎙️ Mia San Mia Audio</span>
+                                <h3 id="podTitle" style="font-size:1.5rem; margin:4px 0;">Ep. 42: How Díaz &amp; Olise Tore Leipzig Apart</h3>
+                                <p id="podMeta" style="font-size:0.82rem; color:var(--text-muted);">Tactical Deep Dive • 24 mins</p>
+                            </div>
+                        </div>
+                        <div class="pod-controls">
+                            <button class="pod-play-btn" id="podPlayBtn" aria-label="Play Podcast">▶</button>
+                            <div class="pod-progress-wrap" id="podScrubber">
+                                <div class="pod-bar-bg"><div class="pod-bar-fill" id="podBarFill"></div></div>
+                                <div class="pod-time"><span id="podCurTime">07:42</span><span id="podDurTime">24:15</span></div>
+                            </div>
+                        </div>
+                        <div class="ep-list" id="podEpList"></div>
+                    </div>
+
+                    <div class="quiz-card">
+                        <div class="quiz-top">
+                            <span id="quizProgress">Question 1 of 5</span>
+                            <span class="text-gold" id="quizScore">Score: 0 / 5</span>
+                        </div>
+                        <h3 class="quiz-question" id="quizQuestion">Loading question...</h3>
+                        <div class="quiz-options" id="quizOptions"></div>
+                        <div class="quiz-footer">
+                            <span id="quizFeedback" style="font-size:0.84rem; color:var(--text-muted);">Select an answer above.</span>
+                            <button class="btn btn-outline" id="quizNextBtn" style="padding:0.45rem 1.1rem; font-size:0.8rem; display:none;">Next Question ➔</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. THE VISUAL VAULT (4K WALLPAPER GENERATOR) -->
+        <section id="vault" class="section-padding" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Aesthetic Collectibles</span>
+                    <h2 class="section-title">The Visual Vault</h2>
+                    <p class="section-desc">Custom minimalist posters styled in our signature obsidian-and-crimson aesthetic. Click any poster to generate and download a crisp HD lock-screen wallpaper.</p>
+                </div>
+                <div class="vault-grid animate-on-scroll">
+                    <div class="vault-card">
+                        <div class="vault-preview" style="background: radial-gradient(circle at 80% 20%, #DC052D, #07070C 75%);">
+                            <span style="font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--brand-gold);">1974 • Vintage Series</span>
+                            <h3 style="font-size:2rem; margin:4px 0;">DER BOMBER 566</h3>
+                            <p style="font-size:0.84rem; opacity:0.85;">Gerd Müller Minimalist Typography Edition</p>
+                        </div>
+                        <div class="vault-info">
+                            <span style="font-size:0.82rem; color:var(--text-muted);">1080x1920 • Mobile 4K</span>
+                            <button class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.78rem;" onclick="downloadWallpaper('DER BOMBER 566', 'GERD MÜLLER • 1964–1979', '#DC052D')">⬇ Download</button>
+                        </div>
+                    </div>
+                    <div class="vault-card">
+                        <div class="vault-preview" style="background: radial-gradient(circle at 20% 20%, #E5B84B, #090912 75%);">
+                            <span style="font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--brand-gold);">2013 &amp; 2020 • Dynasty</span>
+                            <h3 style="font-size:2rem; margin:4px 0;">TREBLE HEGEMONY</h3>
+                            <p style="font-size:0.84rem; opacity:0.85;">Wembley &amp; Lisbon Gold Foil Edition</p>
+                        </div>
+                        <div class="vault-info">
+                            <span style="font-size:0.82rem; color:var(--text-muted);">1080x1920 • Mobile 4K</span>
+                            <button class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.78rem;" onclick="downloadWallpaper('TREBLE HEGEMONY', '2013 WEMBLEY • 2020 LISBON', '#E5B84B')">⬇ Download</button>
+                        </div>
+                    </div>
+                    <div class="vault-card">
+                        <div class="vault-preview" style="background: radial-gradient(circle at 50% 10%, #0066B2, #07070C 75%);">
+                            <span style="font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--brand-gold);">2026/27 • Tactical Series</span>
+                            <h3 style="font-size:2rem; margin:4px 0;">ALLIANZ NIGHTS</h3>
+                            <p style="font-size:0.84rem; opacity:0.85;">Obsidian &amp; Bavarian Blue Matchday Edition</p>
+                        </div>
+                        <div class="vault-info">
+                            <span style="font-size:0.82rem; color:var(--text-muted);">1080x1920 • Mobile 4K</span>
+                            <button class="btn btn-outline" style="padding:0.45rem 1rem; font-size:0.78rem;" onclick="downloadWallpaper('MIA SAN MIA', 'STERN DES SÜDENS • EST. 1900', '#0066B2')">⬇ Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. DEDICATED HISTORY TIMELINE -->
+        <section id="history" class="section-padding">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">The Archives</span>
+                    <h2 class="section-title">The Evolution of an Empire</h2>
+                    <p class="section-desc">Four definitive eras that forged the identity of Stern des Südens.</p>
+                </div>
+                <div class="history-timeline-grid animate-on-scroll">
+                    <div class="history-timeline-card" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80');">
+                        <span class="history-era">1900 — 1945</span><h3>Founding &amp; Resistance</h3>
+                        <p>Born at Café Gisela, surviving the dark political suppression of the Third Reich under figures like Kurt Landauer.</p>
+                    </div>
+                    <div class="history-timeline-card" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80');">
+                        <span class="history-era">1965 — 1976</span><h3>The Golden Axis</h3>
+                        <p>Maier, Beckenbauer, and Müller drag Bayern to the top flight, winning three consecutive European Cup crowns.</p>
+                    </div>
+                    <div class="history-timeline-card" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80');">
+                        <span class="history-era">1999 — 2001</span><h3>Agony &amp; Redemption</h3>
+                        <p>From Camp Nou heartbreak against Manchester United to Oliver Kahn’s penalty heroics in Milan.</p>
+                    </div>
+                    <div class="history-timeline-card" style="background-image: url('https://images.unsplash.com/photo-1518605368461-1e1e38ce8058?auto=format&fit=crop&w=800&q=80');">
+                        <span class="history-era">2013 &amp; 2020</span><h3>The Treble Hegemony</h3>
+                        <p>Overcoming the Dahoam trauma to build an unstoppable machine: Wembley glory and the ruthless sextuple.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. LATEST VIDEOS ON YOUTUBE -->
+        <section id="videos" class="section-padding" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Bayern DNA TV</span>
+                    <h2 class="section-title">Latest on YouTube</h2>
+                    <p class="section-desc">Tactical deep dives, player spotlights, and historical retrospectives.</p>
+                </div>
+                <div class="video-grid animate-on-scroll">
+                    <a href="https://youtube.com/channel/UCqn41D9EP0SOvKpFWnCbB6A" target="_blank" rel="noopener" class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1518605368461-1e1e38ce8058?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" loading="lazy">
+                            <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">How Bayern's 2013 Treble Team Was Built</h3>
+                            <div class="video-meta">12K views • 2 days ago</div>
+                        </div>
+                    </a>
+                    <a href="https://youtube.com/channel/UCqn41D9EP0SOvKpFWnCbB6A" target="_blank" rel="noopener" class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" loading="lazy">
+                            <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">The Tactical Genius Behind Hansi Flick's 2020 Side</h3>
+                            <div class="video-meta">45K views • 1 week ago</div>
+                        </div>
+                    </a>
+                    <a href="https://youtube.com/channel/UCqn41D9EP0SOvKpFWnCbB6A" target="_blank" rel="noopener" class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1551280857-22709289fb46?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" loading="lazy">
+                            <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Why Der Klassiker Means More Than Three Points</h3>
+                            <div class="video-meta">8K views • 3 weeks ago</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="text-center" style="margin-top: 2.5rem;">
+                    <a href="https://youtube.com/channel/UCqn41D9EP0SOvKpFWnCbB6A" target="_blank" rel="noopener" class="btn btn-outline">View All Videos on YouTube</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. EDITORIAL / FEATURED STORIES -->
+        <section id="stories" class="section-padding">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Longform Reads</span>
+                    <h2 class="section-title">Editorial</h2>
+                    <p class="section-desc">Written analysis, history lessons, and opinion pieces. Click any story card to read.</p>
+                    <div class="filter-tabs" id="storyTabs">
+                        <button class="filter-tab active" data-filter="all">All Stories</button>
+                        <button class="filter-tab" data-filter="history">History</button>
+                        <button class="filter-tab" data-filter="tactics">Tactics</button>
+                        <button class="filter-tab" data-filter="culture">Culture</button>
+                    </div>
+                </div>
+                <div class="stories-grid animate-on-scroll" id="storiesGrid">
+                    <article class="story-card" data-category="history" data-idx="0">
+                        <div class="story-img"><img src="https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=800&q=80" alt="Olympiastadion" loading="lazy"></div>
+                        <div class="story-content"><span class="story-tag">History</span><h3 class="story-title">The Olympiastadion Era: A Look Back</h3><div class="story-meta"><span>By Editorial</span><span>5 min read ➔</span></div></div>
+                    </article>
+                    <article class="story-card" data-category="tactics" data-idx="1">
+                        <div class="story-img"><img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=800&q=80" alt="Tactics" loading="lazy"></div>
+                        <div class="story-content"><span class="story-tag">Tactics</span><h3 class="story-title">Deconstructing Kompany's Positional Firepower</h3><div class="story-meta"><span>By Editorial</span><span>8 min read ➔</span></div></div>
+                    </article>
+                    <article class="story-card" data-category="culture" data-idx="2">
+                        <div class="story-img"><img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80" alt="Südkurve" loading="lazy"></div>
+                        <div class="story-content"><span class="story-tag">Culture</span><h3 class="story-title">Südkurve: The Beating Heart of the Arena</h3><div class="story-meta"><span>By Editorial</span><span>4 min read ➔</span></div></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. ON THIS DAY WIDGET -->
+        <section class="otd-section animate-on-scroll">
+            <div class="container">
+                <div class="otd-box">
+                    <div class="otd-title">On This Day &amp; Iconic Milestones in Bayern History</div>
+                    <div class="otd-fact" id="otdText">Loading history...</div>
+                    <button class="otd-btn" id="nextFactBtn">Shuffle Historical Fact ➔</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. HALL OF FAME TOP 10 -->
+        <section id="stats" class="section-padding">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="eyebrow">Hall of Fame</span>
+                    <h2 class="section-title">Bayern Top 10 Leaderboards</h2>
+                    <p class="section-desc">Switch categories below to explore Top 10 Goalscorers, Assist Providers, Appearances, and Most Trophies.</p>
+                    <div class="filter-tabs" id="recordsTabs"></div>
+                </div>
+                <div class="top10-list animate-on-scroll" id="recordsList"></div>
+                <p class="top10-note" id="recordsNote"></p>
+            </div>
+        </section>
+
+        <!-- 13. NEWSLETTER -->
+        <section id="newsletter" class="section-padding newsletter-section animate-on-scroll">
+            <div class="container">
+                <span class="eyebrow">Weekly Dispatch</span>
+                <h2 class="section-title">Join The DNA Newsletter</h2>
+                <p class="section-desc" style="margin-bottom: 0;">Get tactical analysis and exclusive stories delivered directly to your inbox every week.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Enter your email address" required aria-label="Email Address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 14. ABOUT & CONTACT -->
+        <section id="about" class="section-padding">
+            <div class="container about-contact-grid animate-on-scroll">
+                <div>
+                    <span class="eyebrow">Our Mission</span>
+                    <h2 class="section-title">About Us</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Bayern Munich DNA was created out of a desire for deeper football coverage. We focus on tactical evolutions, rich history, and the stories of the players who bleed red.</p>
+                    <h3 style="margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.5rem;">Work With Us</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Interested in sponsorships or collaborations? Reach out directly to our editorial team.</p>
+                </div>
+                <div>
+                    <span class="eyebrow">Collaborate</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <form class="contact-form" onsubmit="handleContact(event)">
+                        <input type="text" placeholder="Your Name" required aria-label="Name">
+                        <input type="email" placeholder="Your Email" required aria-label="Email">
+                        <textarea placeholder="How can we help?" required aria-label="Message"></textarea>
+                        <button type="submit" class="btn btn-outline" style="align-self: flex-start;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 15. FULL FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">BAYERN <span class="text-red">DNA</span></span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Where Bayern history, tactics and stories live. Independent football media.</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/BayernMunichDNA" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/channel/UCqn41D9EP0SOvKpFWnCbB6A" target="_blank" rel="noopener" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#live-match">Match Centre</a></li>
+                        <li><a href="#tactics">Tactics</a></li>
+                        <li><a href="#transfers">Squad Radar</a></li>
+                        <li><a href="#fanzone">Podcast &amp; Quiz</a></li>
+                        <li><a href="#vault">4K Vault</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#stats">Top 10 Records</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-style: italic; margin-bottom: 0.4rem;">Bayern Munich DNA is an independent fan project and is not affiliated with FC Bayern München AG.</p>
+                <p>&copy; <span id="currentYear"></span> Bayern Munich DNA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARTICLE READER MODAL -->
+    <div id="articleModal" style="display:none; position:fixed; inset:0; background:rgba(7,7,12,0.88); backdrop-filter:blur(10px); z-index:3000; padding:5% 4%; overflow-y:auto;">
+        <div style="max-width:760px; margin:0 auto; background:var(--bg-card); border:1px solid var(--border-highlight); border-radius:20px; padding:2.5rem; position:relative; box-shadow:0 25px 60px rgba(0,0,0,0.6);">
+            <button onclick="closeArticle()" style="position:absolute; top:1.25rem; right:1.25rem; background:var(--bg-main); border:1px solid var(--border-color); color:var(--text-main); width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1.1rem;">✕</button>
+            <span id="modalTag" class="eyebrow">Category</span>
+            <h2 id="modalTitle" style="font-size:2.2rem; margin:0.5rem 0 1rem;">Article Title</h2>
+            <div id="modalMeta" style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.5rem; padding-bottom:1rem; border-bottom:1px solid var(--border-color);"></div>
+            <div id="modalContent" style="color:var(--text-main); font-size:1.05rem; line-height:1.8;"></div>
+        </div>
+    </div>
+
+    <!-- --- COMPLETE INTERACTIVE JAVASCRIPT --- -->
+    <script>
+        /* ==========================================
+           1. CORE DATA (UPDATED AS OF 19 OCT 2026)
+           ========================================== */
+        const NEXT_MATCH = {
+            t: "2026-10-21T19:00:00Z",
+            opp: "Arsenal",
+            comp: "UEFA Champions League • Matchday 3 • Allianz Arena",
+            p: [46.0, 28.0, 26.0]
+        };
+
+        const MATCHES_DB = [
+            {
+                id: 0, date: "2026-10-17T16:30:00Z", comp: "BL", isHome: 1, opp: "RB Leipzig", code: "RBL", fcbG: 6, oppG: 1,
+                xg: ["4.18", "0.96"], scorers: "Díaz (12', 47', 69'), Pavlović (26'), Olise (34'), Kane (53') — Maksimović (90+1')",
+                mvp: ["Luis Díaz", "9.7", "Hat-trick (12', 47', 69') & 1 Assist vs RB Leipzig"],
+                stats: [["Possession %", 62, 38, "#DC052D", "#0066B2"], ["Total Shots", 29, 12, "#DC052D", "#0066B2"], ["Shots on Target", 17, 4, "#10B981", "#06B6D4"], ["Corners", 11, 3, "#E5B84B", "#8B5CF6"], ["Fouls", 15, 6, "#F97316", "#64748B"], ["Yellow Cards", 1, 0, "#E5B84B", "#E5B84B"]]
+            },
+            {
+                id: 1, date: "2026-10-13T19:00:00Z", comp: "UCL", isHome: 0, opp: "Viking FK", code: "VIK", fcbG: 3, oppG: 3,
+                xg: ["2.84", "0.92"], scorers: "Harry Kane (2 goals), Michael Olise — Viking FK (3)",
+                mvp: ["Harry Kane", "9.8", "Brace & 5 Shots on Target in Stavanger"],
+                stats: [["Possession %", 64, 36, "#DC052D", "#0066B2"], ["Total Shots", 28, 8, "#DC052D", "#0066B2"], ["Shots on Target", 9, 5, "#10B981", "#06B6D4"], ["Corners", 15, 7, "#E5B84B", "#8B5CF6"], ["Fouls", 8, 11, "#F97316", "#64748B"], ["Yellow Cards", 3, 2, "#E5B84B", "#E5B84B"]]
+            },
+            {
+                id: 2, date: "2026-10-10T13:30:00Z", comp: "BL", isHome: 0, opp: "FC Augsburg", code: "FCA", fcbG: 2, oppG: 2,
+                xg: ["2.35", "1.10"], scorers: "Bayern (2, assists by Harry Kane x2) — FC Augsburg (2)",
+                mvp: ["Harry Kane", "8.6", "2 Playmaking Assists & 20 Accurate Passes"],
+                stats: [["Possession %", 68, 32, "#DC052D", "#0066B2"], ["Total Shots", 22, 9, "#DC052D", "#0066B2"], ["Shots on Target", 8, 4, "#10B981", "#06B6D4"], ["Corners", 11, 4, "#E5B84B", "#8B5CF6"], ["Fouls", 10, 14, "#F97316", "#64748B"], ["Yellow Cards", 2, 4, "#E5B84B", "#E5B84B"]]
+            },
+            {
+                id: 3, date: "2026-09-18T18:30:00Z", comp: "BL", isHome: 1, opp: "Union Berlin", code: "FCU", fcbG: 7, oppG: 0,
+                xg: ["4.92", "0.28"], scorers: "Kane (x2), Olise, Musiala, Díaz, Karl — Clean Sheet",
+                mvp: ["Harry Kane", "9.5", "Brace & Complete Attacking Masterclass"],
+                stats: [["Possession %", 74, 26, "#DC052D", "#0066B2"], ["Total Shots", 31, 3, "#DC052D", "#0066B2"], ["Shots on Target", 16, 1, "#10B981", "#06B6D4"], ["Corners", 14, 1, "#E5B84B", "#8B5CF6"], ["Fouls", 6, 12, "#F97316", "#64748B"], ["Yellow Cards", 0, 3, "#E5B84B", "#E5B84B"]]
+            },
+            {
+                id: 4, date: "2026-09-13T15:30:00Z", comp: "BL", isHome: 0, opp: "SV Elversberg", code: "SVE", fcbG: 2, oppG: 1,
+                xg: ["2.40", "0.75"], scorers: "Luis Díaz, Harry Kane — SV Elversberg (1)",
+                mvp: ["Joshua Kimmich", "8.7", "118 Touches & Midfield Control"],
+                stats: [["Possession %", 69, 31, "#DC052D", "#0066B2"], ["Total Shots", 20, 7, "#DC052D", "#0066B2"], ["Shots on Target", 7, 3, "#10B981", "#06B6D4"], ["Corners", 9, 3, "#E5B84B", "#8B5CF6"], ["Fouls", 9, 13, "#F97316", "#64748B"], ["Yellow Cards", 1, 2, "#E5B84B", "#E5B84B"]]
+            },
+            {
+                id: 5, date: "2026-09-10T19:00:00Z", comp: "UCL", isHome: 1, opp: "Bodø/Glimt", code: "BOD", fcbG: 5, oppG: 0,
+                xg: ["3.85", "0.41"], scorers: "Musiala (x2), Kane, Olise, Gnabry — Clean Sheet",
+                mvp: ["Jamal Musiala", "9.4", "2 Goals, 1 Assist & 8 Dribbles"],
+                stats: [["Possession %", 71, 29, "#DC052D", "#0066B2"], ["Total Shots", 26, 5, "#DC052D", "#0066B2"], ["Shots on Target", 12, 2, "#10B981", "#06B6D4"], ["Corners", 12, 2, "#E5B84B", "#8B5CF6"], ["Fouls", 7, 10, "#F97316", "#64748B"], ["Yellow Cards", 1, 2, "#E5B84B", "#E5B84B"]]
+            }
+        ];
+
+        let currentFormation = "4-2-3-1";
+        let captainNum = "6";
+        const FORMATIONS = {
+            "4-2-3-1": [
+                { num: "40", name: "Urbig", rating: "7.2", x: 50, y: 88, role: "Sweeper Keeper" },
+                { num: "27", name: "Laimer", rating: "7.5", x: 82, y: 70, role: "Inverted Right-Back" },
+                { num: "2", name: "Upamecano", rating: "7.8", x: 62, y: 73, role: "Ball-Playing CB" },
+                { num: "3", name: "Kim", rating: "7.6", x: 38, y: 73, role: "Aggressive Stopper" },
+                { num: "11", name: "Brown", rating: "7.9", x: 18, y: 70, role: "Attacking Left-Back" },
+                { num: "6", name: "Kimmich", rating: "8.8", x: 60, y: 52, role: "Deep Playmaker" },
+                { num: "45", name: "Pavlović", rating: "8.6", x: 40, y: 52, role: "Tempo Controller" },
+                { num: "17", name: "Olise", rating: "8.9", x: 80, y: 31, role: "Inside Right Winger" },
+                { num: "10", name: "Musiala", rating: "9.1", x: 50, y: 33, role: "Half-Space Creator" },
+                { num: "14", name: "Díaz", rating: "9.7", x: 20, y: 31, role: "Direct Left Winger" },
+                { num: "9", name: "Kane", rating: "8.9", x: 50, y: 14, role: "Complete Striker" }
+            ],
+            "4-3-3": [
+                { num: "40", name: "Urbig", rating: "7.2", x: 50, y: 88, role: "Sweeper Keeper" },
+                { num: "27", name: "Laimer", rating: "7.5", x: 84, y: 68, role: "Overlapping RB" },
+                { num: "2", name: "Upamecano", rating: "7.8", x: 62, y: 74, role: "Right Centre-Back" },
+                { num: "3", name: "Kim", rating: "7.6", x: 38, y: 74, role: "Left Centre-Back" },
+                { num: "11", name: "Brown", rating: "7.9", x: 16, y: 68, role: "Overlapping LB" },
+                { num: "6", name: "Kimmich", rating: "8.8", x: 50, y: 56, role: "Single Pivot (#6)" },
+                { num: "45", name: "Pavlović", rating: "8.6", x: 68, y: 42, role: "Right Mezzala (#8)" },
+                { num: "10", name: "Musiala", rating: "9.1", x: 32, y: 42, role: "Left Mezzala (#8)" },
+                { num: "17", name: "Olise", rating: "8.9", x: 80, y: 22, role: "Wide Right Forward" },
+                { num: "14", name: "Díaz", rating: "9.7", x: 20, y: 22, role: "Wide Left Forward" },
+                { num: "9", name: "Kane", rating: "8.9", x: 50, y: 14, role: "Centre Forward" }
+            ],
+            "3-4-2-1": [
+                { num: "40", name: "Urbig", rating: "7.2", x: 50, y: 88, role: "Sweeper Keeper" },
+                { num: "27", name: "Laimer", rating: "7.5", x: 74, y: 73, role: "Right CB" },
+                { num: "2", name: "Upamecano", rating: "7.8", x: 50, y: 75, role: "Central Libero" },
+                { num: "3", name: "Kim", rating: "7.6", x: 26, y: 73, role: "Left CB" },
+                { num: "17", name: "Olise", rating: "8.9", x: 85, y: 48, role: "Right Wing-Back" },
+                { num: "6", name: "Kimmich", rating: "8.8", x: 60, y: 52, role: "Double Pivot" },
+                { num: "45", name: "Pavlović", rating: "8.6", x: 40, y: 52, role: "Double Pivot" },
+                { num: "11", name: "Brown", rating: "7.9", x: 15, y: 48, role: "Left Wing-Back" },
+                { num: "10", name: "Musiala", rating: "9.1", x: 66, y: 28, role: "Right Inside #10" },
+                { num: "14", name: "Díaz", rating: "9.7", x: 34, y: 28, role: "Left Inside #10" },
+                { num: "9", name: "Kane", rating: "8.9", x: 50, y: 13, role: "Target Striker" }
+            ]
+        };
+
+        const FIXTURES = [
+            ["2026-10-21T19:00:00Z", "UCL", 1, "Arsenal"],
+            ["2026-10-25T16:30:00Z", "BL", 0, "SC Freiburg"],
+            ["2026-10-28T19:45:00Z", "DFB", 1, "1. FC Magdeburg"],
+            ["2026-10-31T17:30:00Z", "BL", 1, "Borussia Dortmund"],
+            ["2026-11-03T20:00:00Z", "UCL", 0, "Atlético Madrid"],
+            ["2026-11-07T14:30:00Z", "BL", 0, "1. FSV Mainz 05"]
+        ];
+
+        const TRANSFERS_DB = [
+            { name: "Jamal Musiala", pos: "Attacking Midfielder • #10", exp: "June 2030", status: "Cornerstone Locked", cls: "locked", note: "Franchise centerpiece of Kompany's project." },
+            { name: "Joshua Kimmich", pos: "Club Captain • #6", exp: "June 2029", status: "Extended", cls: "locked", note: "Surpassed 500+ competitive Bayern appearances." },
+            { name: "Michael Olise", pos: "Right Winger • #17", exp: "June 2029", status: "Untouchable", cls: "locked", note: "19 Bundesliga assists in 2025/26 campaign." },
+            { name: "Luis Díaz", pos: "Left Winger • #14", exp: "June 2029", status: "Peak Form", cls: "locked", note: "Hat-trick hero in 6–1 win over RB Leipzig." },
+            { name: "Dayot Upamecano", pos: "Centre-Back • #2", exp: "June 2028", status: "Priority Talks", cls: "talks", note: "Key high-line recovery defender under Kompany." },
+            { name: "Aleksandar Pavlović", pos: "Central Midfielder • #45", exp: "June 2029", status: "Homegrown Star", cls: "target", note: "Bavarian academy heartbeat in midfield." }
+        ];
+
+        const PODCAST_EPS = [
+            { title: "Ep. 42: How Díaz & Olise Tore Leipzig Apart", meta: "Tactical Deep Dive • 24:15", dur: "24:15" },
+            { title: "Ep. 41: Arsenal Preview — High Line vs Saka", meta: "Champions League Special • 31:40", dur: "31:40" },
+            { title: "Ep. 40: Kurt Landauer & The Soul of Munich", meta: "Historical Documentary • 42:10", dur: "42:10" }
+        ];
+
+        const QUIZ_QUESTIONS = [
+            { q: "In what year was FC Bayern Munich founded at Café Gisela by Franz John?", opts: ["1899", "1900", "1904", "1912"], ans: 1, exp: "FC Bayern was founded on February 27, 1900 by Franz John and 10 other players." },
+            { q: "Who scored the 89th-minute winning goal in the 2013 Champions League Final at Wembley?", opts: ["Franck Ribéry", "Thomas Müller", "Arjen Robben", "Bastian Schweinsteiger"], ans: 2, exp: "Arjen Robben glided past Weidenfeller in the 89th minute to seal the 2013 Treble." },
+            { q: "How many all-time competitive appearances did Thomas Müller record for FC Bayern?", opts: ["632", "700", "756", "810"], ans: 2, exp: "Thomas Müller holds the all-time club record with 756 competitive appearances." },
+            { q: "Which player scored a hat-trick in Bayern's 6–1 win over RB Leipzig on Oct 17, 2026?", opts: ["Luis Díaz", "Michael Olise", "Aleksandar Pavlović", "Serge Gnabry"], ans: 0, exp: "Luis Díaz netted at 12', 47', and 69' alongside an assist against RB Leipzig." },
+            { q: "Who holds Bayern Munich's all-time goalscoring record with 566 goals?", opts: ["Robert Lewandowski", "Karl-Heinz Rummenigge", "Gerd Müller", "Harry Kane"], ans: 2, exp: "'Der Bomber' Gerd Müller scored an unmatched 566 goals between 1964 and 1979." }
+        ];
+
+        const TOP_10_RECORDS = {
+            "Goalscorers": {
+                icon: "⚽", sub: "All-time top goalscorers in all competitive matches for FC Bayern.",
+                note: "*Harry Kane scored 61 goals across all competitions in 2025/26 and continues climbing in 2026/27.",
+                data: [["Gerd Müller", 566, "1964–1979 • Striker"], ["Robert Lewandowski", 344, "2014–2022 • Striker"], ["Thomas Müller", 250, "2008–2025 • Raumdeuter"], ["Karl-Heinz Rummenigge", 217, "1974–1984 • Forward"], ["Rainer Ohlhauser", 185, "1961–1970 • Forward"], ["Roland Wohlfarth", 155, "1984–1993 • Striker"], ["Dieter Hoeneß", 149, "1979–1987 • Striker"], ["Arjen Robben", 144, "2009–2019 • Winger"], ["Harry Kane", 141, "2023–Present • Active*"], ["Franck Ribéry", 124, "2007–2019 • Winger"]]
+            },
+            "Assist Providers": {
+                icon: "🎯", sub: "Recent season & active playmaking leaders for FC Bayern.",
+                note: "All-time club record: Thomas Müller with 223 career assists in all competitions for Bayern.",
+                data: [["Michael Olise", 19, "Winger • 19 Assists in 2025/26"], ["Luis Díaz", 14, "Winger • 15 Goals & 14 Assists"], ["Konrad Laimer", 9, "Midfielder / Right-Back"], ["Joshua Kimmich", 9, "Captain & Deep Playmaker"], ["Harry Kane", 7, "Striker • 2 Assists vs RB Leipzig"], ["Serge Gnabry", 6, "Winger / Forward"], ["Lennart Karl", 5, "Attacking Midfielder"], ["Jamal Musiala", 4, "Attacking Midfielder"], ["Leon Goretzka", 3, "Central Midfielder"], ["Tom Bischof", 3, "Central Midfielder"]]
+            },
+            "Appearances": {
+                icon: "👕", sub: "All-time most competitive appearances in FC Bayern history.",
+                note: "*Joshua Kimmich surpassed the 500-appearance milestone for FC Bayern in October 2026.",
+                data: [["Thomas Müller", 756, "All-time club record"], ["Sepp Maier", 700, "1962–1979 • Goalkeeper"], ["Oliver Kahn", 632, "1994–2008 • Goalkeeper"], ["Gerd Müller", 607, "1964–1979 • Striker"], ["Franz Beckenbauer", 582, "1964–1977 • Libero"], ["Manuel Neuer", 580, "2011–Present • Goalkeeper*"], ["Philipp Lahm", 517, "2002–2017 • Defender"], ["Joshua Kimmich", 501, "2015–Present • Club Captain*"], ["Bastian Schweinsteiger", 500, "2002–2015 • Midfielder"], ["David Alaba", 431, "2010–2021 • Defender"]]
+            },
+            "Most Trophies": {
+                icon: "🏆", sub: "Players with the most Bundesliga titles won with FC Bayern.",
+                note: "Thomas Müller and Manuel Neuer share the all-time Bundesliga record with 13 league crowns each.",
+                data: [["Thomas Müller", 13, "34 major career trophies overall"], ["Manuel Neuer", 13, "Equalled all-time record in 2025/26"], ["Joshua Kimmich", 10, "Active • Multiple domestic double winner"], ["Sven Ulreich", 10, "Goalkeeper"], ["David Alaba", 10, "2x Treble winner (2013, 2020)"], ["Franck Ribéry", 9, "2013 UEFA Best Player in Europe"], ["Jérôme Boateng", 9, "2x Treble winner (2013, 2020)"], ["Javi Martínez", 9, "2x Treble & UEFA Super Cup hero"], ["Kingsley Coman", 9, "2020 UCL Final match-winner"], ["Philipp Lahm", 8, "Also on 8: Kahn, Schweinsteiger, Robben & Scholl"]]
+            }
+        };
+
+        /* ==========================================
+           2. MATCH CENTRE, FAN POLL & PITCH SANDBOX
+           ========================================== */
+        let selectedMatchIndex = 0;
+        let currentInspectorView = 'stats';
+        const fmtDate = (t) => new Date(t).toLocaleString(undefined, { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+
+        document.getElementById('nextMatchBanner').innerHTML = `
+            <div class="next-match-info">
+                <div style="display:flex; gap:0.6rem; align-items:center; margin-bottom:0.35rem;">
+                    <span class="status-pill" style="background:rgba(220,5,45,0.18); color:var(--brand-red); border-color:rgba(220,5,45,0.35);"><span class="live-dot"></span> NEXT MATCHDAY</span>
+                    <span style="font-size:0.78rem; color:var(--brand-gold); font-weight:700;">★ CHAMPIONS LEAGUE BLOCKBUSTER</span>
+                </div>
+                <h3>FC BAYERN vs ${NEXT_MATCH.opp.toUpperCase()}</h3>
+                <div class="next-match-meta"><span>📍 ${NEXT_MATCH.comp}</span> • <span>🕒 ${fmtDate(NEXT_MATCH.t)}</span></div>
+                <div class="prob-bar">
+                    <i style="width:${NEXT_MATCH.p[0]}%; background:var(--brand-red)"></i>
+                    <i style="width:${NEXT_MATCH.p[1]}%; background:var(--brand-gold)"></i>
+                    <i style="width:${NEXT_MATCH.p[2]}%; background:var(--brand-navy)"></i>
+                </div>
+                <div class="prob-legend">
+                    <span><i class="prob-dot" style="background:var(--brand-red)"></i>Bayern Win ${NEXT_MATCH.p[0]}%</span>
+                    <span><i class="prob-dot" style="background:var(--brand-gold)"></i>Draw ${NEXT_MATCH.p[1]}%</span>
+                    <span><i class="prob-dot" style="background:var(--brand-navy)"></i>${NEXT_MATCH.opp} ${NEXT_MATCH.p[2]}%</span>
+                </div>
+            </div>
+            <div class="countdown-grid" id="countdownClock"></div>
+        `;
+
+        function updateCountdown() {
+            const diff = Math.max(0, Math.floor((new Date(NEXT_MATCH.t) - Date.now()) / 1000));
+            const units = [["Days", Math.floor(diff / 86400)], ["Hrs", Math.floor((diff % 86400) / 3600)], ["Min", Math.floor((diff % 3600) / 60)], ["Sec", diff % 60]];
+            document.getElementById('countdownClock').innerHTML = units.map(u => `<div class="cd-box"><b>${String(u[1]).padStart(2, '0')}</b><small>${u[0]}</small></div>`).join('');
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        let pollVotes = [142, 34, 24];
+        function renderPoll() {
+            const total = pollVotes.reduce((a, b) => a + b, 0);
+            const labels = ["🔥 Bayern Win", "🤝 Draw", "🛡️ Arsenal Win"];
+            document.getElementById('pollContainer').innerHTML = labels.map((lbl, idx) => {
+                const pct = Math.round((pollVotes[idx] / total) * 100);
+                return `
+                    <button class="poll-btn" onclick="castPollVote(${idx})">
+                        <div class="poll-fill" style="width:${pct}%"></div>
+                        <span>${lbl}</span>
+                        <span class="poll-pct">${pct}%</span>
+                    </button>
+                `;
+            }).join('');
+        }
+        window.castPollVote = function(idx) {
+            pollVotes[idx] += 1;
+            renderPoll();
+            showToast("Matchday vote recorded!");
+        };
+        renderPoll();
+
+        const gf = MATCHES_DB.reduce((a, m) => a + m.fcbG, 0);
+        const ga = MATCHES_DB.reduce((a, m) => a + m.oppG, 0);
+        const wins = MATCHES_DB.filter(m => m.fcbG > m.oppG).length;
+        const cs = MATCHES_DB.filter(m => m.oppG === 0).length;
+        const snapItems = [[MATCHES_DB.length, "Matches Tracked", "#DC052D"], [wins + "W-2D-0L", "Unbeaten Run", "#10B981"], [gf, "Goals Scored", "#E5B84B"], ["+" + (gf - ga), "Goal Difference", "#06B6D4"], [cs, "Clean Sheets", "#F97316"], ["1st", "Bundesliga Pos", "#8B5CF6"]];
+        document.getElementById('seasonSnapshot').innerHTML = snapItems.map(item => `<div class="snap-card" style="--snap-accent:${item[2]}"><b>${item[0]}</b><span>${item[1]}</span></div>`).join('');
+
+        function renderMatchInspector() {
+            const m = MATCHES_DB[selectedMatchIndex];
+            const compBadge = document.getElementById('inspCompBadge');
+            compBadge.className = `comp-pill ${m.comp}`;
+            compBadge.innerText = `${m.comp === 'UCL' ? 'Champions League' : 'Bundesliga'} • ${m.isHome ? 'Home' : 'Away'}`;
+            document.getElementById('inspDateText').innerText = fmtDate(m.date);
+
+            const homeTeam = m.isHome ? { name: "FC Bayern", code: "FCB", cls: "crest-fcb", sub: `Vincent Kompany (${currentFormation})` } : { name: m.opp, code: m.code, cls: "crest-opp", sub: "Host Club" };
+            const awayTeam = m.isHome ? { name: m.opp, code: m.code, cls: "crest-opp", sub: "Visiting Club" } : { name: "FC Bayern", code: "FCB", cls: "crest-fcb", sub: `Vincent Kompany (${currentFormation})` };
+            const homeScore = m.isHome ? m.fcbG : m.oppG;
+            const awayScore = m.isHome ? m.oppG : m.fcbG;
+            const xgText = m.isHome ? `xG: ${m.xg[0]} — ${m.xg[1]}` : `xG: ${m.xg[1]} — ${m.xg[0]}`;
+
+            document.getElementById('inspScoreboard').innerHTML = `
+                <div class="team-box"><div class="team-crest ${homeTeam.cls}">${homeTeam.code}</div><div class="team-name">${homeTeam.name}</div><div class="team-sub">${homeTeam.sub}</div></div>
+                <div class="score-box"><div class="match-score">${homeScore} - ${awayScore}</div><span class="xg-pill">${xgText}</span></div>
+                <div class="team-box"><div class="team-crest ${awayTeam.cls}">${awayTeam.code}</div><div class="team-name">${awayTeam.name}</div><div class="team-sub">${awayTeam.sub}</div></div>
+            `;
+
+            const body = document.getElementById('inspectorBody');
+            if (currentInspectorView === 'stats') {
+                body.innerHTML = m.stats.map(s => {
+                    const leftVal = m.isHome ? s[1] : s[2];
+                    const rightVal = m.isHome ? s[2] : s[1];
+                    const leftCol = m.isHome ? s[3] : s[4];
+                    const rightCol = m.isHome ? s[4] : s[3];
+                    return `
+                        <div class="cmp-item">
+                            <div class="cmp-labels"><b style="color:${leftCol}">${leftVal}</b><span>${s[0]}</span><b style="color:${rightCol}">${rightVal}</b></div>
+                            <div class="cmp-bar"><i style="flex:${Math.max(1, leftVal)}; background:${leftCol}"></i><i style="flex:${Math.max(1, rightVal)}; background:${rightCol}"></i></div>
+                        </div>
+                    `;
+                }).join('') + `
+                    <div class="scorers-summary">⚽ <strong>Goalscorers:</strong> ${m.scorers}</div>
+                    <div class="mvp-strip">
+                        <div>
+                            <span style="font-size:0.7rem; font-weight:700; color:var(--brand-gold); text-transform:uppercase; letter-spacing:1px;">★ Man of the Match</span>
+                            <div style="font-weight:700; font-size:0.98rem;">${m.mvp[0]} <span style="color:var(--text-muted); font-weight:400; font-size:0.82rem;">— ${m.mvp[2]}</span></div>
+                        </div>
+                        <span class="mvp-rating-pill">${m.mvp[1]}</span>
+                    </div>
+                `;
+            } else {
+                const pitchData = FORMATIONS[currentFormation];
+                body.innerHTML = `
+                    <div class="pitch-controls">
+                        <div class="formation-btns">
+                            ${Object.keys(FORMATIONS).map(f => `<button class="form-btn \${f === currentFormation ? 'active' : ''}" onclick="setFormation('${f}')">${f}</button>`).join('')}
+                        </div>
+                        <span style="font-size:0.74rem; color:var(--text-muted);">Click any player to assign Captain [C]</span>
+                    </div>
+                    <div class="tactical-pitch">
+                        <div class="pitch-box-top"></div><div class="pitch-line-half"></div><div class="pitch-circle"></div><div class="pitch-box-bot"></div>
+                        ${pitchData.map(p => `
+                            <div class="pitch-player" style="left:\${p.x}%; top:${p.y}\%;" onclick="setCaptain('${p.num}', '${p.name}', '${p.role}')">
+                                <div class="player-dot">
+                                    \${p.num}
+                                    <span class="player-rating">${p.rating}</span>${p.num === captainNum ? '<span class="cap-badge">C</span>' : ''}
+                                </div>
+                                <span class="player-label">\${p.name}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+        }
+
+        window.setFormation = function(fmt) {
+            currentFormation = fmt;
+            renderMatchInspector();
+            showToast(`Switched Tactical Shape to ${fmt}`);
+        };
+
+        window.setCaptain = function(num, name, role) {
+            captainNum = num;
+            renderMatchInspector();
+            showToast(`Captaincy assigned to ${name} (#${num} • ${role})`);
+        };
+
+        document.getElementById('inspectorTabs').addEventListener('click', (e) => {
+            const btn = e.target.closest('button[data-view]');
+            if (!btn) return;
+            document.querySelectorAll('#inspectorTabs .insp-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentInspectorView = btn.getAttribute('data-view');
+            renderMatchInspector();
+        });
+
+        let currentRightPanel = 'res';
+        const centrePanelBody = document.getElementById('centrePanelBody');
+        function renderCentrePanel(mode) {
+            currentRightPanel = mode;
+            if (mode === 'res') {
+                centrePanelBody.innerHTML = MATCHES_DB.map((m, idx) => {
+                    const outcome = m.fcbG > m.oppG ? 'W' : m.fcbG < m.oppG ? 'L' : 'D';
+                    const matchTitle = m.isHome ? `FC Bayern vs ${m.opp}` : `${m.opp} vs FC Bayern`;
+                    const scoreStr = m.isHome ? `${m.fcbG} - ${m.oppG}` : `${m.oppG} - ${m.fcbG}`;
+                    return `
+                        <div class="fixture-row ${idx === selectedMatchIndex ? 'selected-match' : ''}" onclick="selectMatch(${idx})">
+                            <div class="fixture-date">${fmtDate(m.date).split(',')[0]}<br><span class="comp-mini ${m.comp}">${m.comp}</span></div>
+                            <div class="fixture-teams">${matchTitle} <span class="badge-res ${outcome}">${outcome}</span></div>
+                            <div class="score-pill">${scoreStr}</div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                centrePanelBody.innerHTML = FIXTURES.map(f => {
+                    const isHome = f[2] === 1;
+                    const matchTitle = isHome ? `FC Bayern vs ${f[3]}` : `${f[3]} vs FC Bayern`;
+                    return `
+                        <div class="fixture-row">
+                            <div class="fixture-date"><span class="comp-mini ${f[1]}">${f[1]}</span><br>${isHome ? 'Home' : 'Away'}</div>
+                            <div class="fixture-teams">${matchTitle}<br><small style="color:var(--text-muted); font-weight:400;">${fmtDate(f[0])}</small></div>
+                            <div class="score-pill" style="font-size:1rem; color:var(--brand-gold);">VS</div>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+        window.selectMatch = function(idx) {
+            selectedMatchIndex = idx;
+            renderMatchInspector();
+            if (currentRightPanel === 'res') renderCentrePanel('res');
+            showToast(`Inspecting: FC Bayern vs ${MATCHES_DB[idx].opp}`);
+        };
+        renderMatchInspector();
+        renderCentrePanel('res');
+        document.getElementById('centreTabs').addEventListener('click', (e) => {
+            const btn = e.target.closest('button[data-panel]');
+            if (!btn) return;
+            document.querySelectorAll('#centreTabs .filter-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderCentrePanel(btn.getAttribute('data-panel'));
+        });
+
+        /* ==========================================
+           3. TRANSFER RADAR, PODCAST & QUIZ ENGINE
+           ========================================== */
+        document.getElementById('transferGrid').innerHTML = TRANSFERS_DB.map(t => `
+            <div class="transfer-card">
+                <div class="tr-top">
+                    <span style="font-size:0.78rem; color:var(--text-muted); font-weight:600;">${t.pos}</span>
+                    <span class="tr-status ${t.cls}">${t.status}</span>
+                </div>
+                <h3 class="tr-name">${t.name}</h3>
+                <p style="font-size:0.86rem; color:var(--text-muted);">${t.note}</p>
+                <div class="tr-meta"><span>Contract Until</span><strong style="color:var(--text-main);">${t.exp}</strong></div>
+            </div>
+        `).join('');
+
+        let isPlayingPod = false;
+        let currentEpIdx = 0;
+        let podInterval = null;
+        let podPct = 32;
+
+        function renderPodcastList() {
+            document.getElementById('podEpList').innerHTML = PODCAST_EPS.map((ep, i) => `
+                <div class="ep-item ${i === currentEpIdx ? 'active' : ''}" onclick="selectPodcast(${i})">
+                    <span><strong>${ep.title}</strong></span>
+                    <span style="font-size:0.75rem; color:var(--text-muted);">${ep.dur}</span>
+                </div>
+            `).join('');
+        }
+        window.selectPodcast = function(idx) {
+            currentEpIdx = idx;
+            podPct = 10;
+            document.getElementById('podTitle').innerText = PODCAST_EPS[idx].title;
+            document.getElementById('podMeta').innerText = PODCAST_EPS[idx].meta;
+            document.getElementById('podDurTime').innerText = PODCAST_EPS[idx].dur;
+            document.getElementById('podBarFill').style.width = podPct + '%';
+            renderPodcastList();
+            if (!isPlayingPod) togglePodPlay();
+        };
+        function togglePodPlay() {
+            isPlayingPod = !isPlayingPod;
+            const btn = document.getElementById('podPlayBtn');
+            btn.innerText = isPlayingPod ? '⏸' : '▶';
+            if (isPlayingPod) {
+                showToast(`Playing: ${PODCAST_EPS[currentEpIdx].title}`);
+                podInterval = setInterval(() => {
+                    podPct = (podPct + 1) % 100;
+                    document.getElementById('podBarFill').style.width = podPct + '%';
+                }, 1000);
+            } else {
+                clearInterval(podInterval);
+            }
+        }
+        document.getElementById('podPlayBtn').addEventListener('click', togglePodPlay);
+        document.getElementById('podScrubber').addEventListener('click', (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            podPct = Math.round(((e.clientX - rect.left) / rect.width) * 100);
+            document.getElementById('podBarFill').style.width = podPct + '%';
+        });
+        renderPodcastList();
+
+        let quizIdx = 0;
+        let quizScore = 0;
+        function renderQuizQuestion() {
+            const qObj = QUIZ_QUESTIONS[quizIdx];
+            document.getElementById('quizProgress').innerText = `Question ${quizIdx + 1} of ${QUIZ_QUESTIONS.length}`;
+            document.getElementById('quizScore').innerText = `Score: ${quizScore} / ${QUIZ_QUESTIONS.length}`;
+            document.getElementById('quizQuestion').innerText = qObj.q;
+            document.getElementById('quizFeedback').innerText = "Select an answer above.";
+            document.getElementById('quizNextBtn').style.display = 'none';
+
+            document.getElementById('quizOptions').innerHTML = qObj.opts.map((opt, i) => `
+                <button class="quiz-opt" onclick="checkQuizAnswer(${i}, this)">${opt}</button>
+            `).join('');
+        }
+        window.checkQuizAnswer = function(selectedIdx, btnEl) {
+            const qObj = QUIZ_QUESTIONS[quizIdx];
+            const allBtns = document.querySelectorAll('#quizOptions .quiz-opt');
+            allBtns.forEach(b => b.disabled = true);
+
+            if (selectedIdx === qObj.ans) {
+                btnEl.classList.add('correct');
+                quizScore++;
+                document.getElementById('quizFeedback').innerHTML = `<strong style="color:var(--brand-green)">Correct!</strong> ${qObj.exp}`;
+            } else {
+                btnEl.classList.add('wrong');
+                allBtns[qObj.ans].classList.add('correct');
+                document.getElementById('quizFeedback').innerHTML = `<strong style="color:var(--brand-red)">Not quite!</strong> ${qObj.exp}`;
+            }
+            document.getElementById('quizScore').innerText = `Score: ${quizScore} / ${QUIZ_QUESTIONS.length}`;
+            const nextBtn = document.getElementById('quizNextBtn');
+            nextBtn.style.display = 'inline-flex';
+            nextBtn.innerText = quizIdx < QUIZ_QUESTIONS.length - 1 ? "Next Question ➔" : "Restart Quiz ↻";
+        };
+        document.getElementById('quizNextBtn').addEventListener('click', () => {
+            if (quizIdx < QUIZ_QUESTIONS.length - 1) { quizIdx++; } else { quizIdx = 0; quizScore = 0; }
+            renderQuizQuestion();
+        });
+        renderQuizQuestion();
+
+        /* ==========================================
+           4. HTML5 CANVAS 4K WALLPAPER GENERATOR
+           ========================================== */
+        window.downloadWallpaper = function(title, subtitle, accentColor) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1080;
+            canvas.height = 1920;
+            const ctx = canvas.getContext('2d');
+
+            const grad = ctx.createRadialGradient(540, 450, 100, 540, 960, 1200);
+            grad.addColorStop(0, accentColor);
+            grad.addColorStop(0.65, '#07070C');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, 1080, 1920);
+
+            ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(80, 80, 920, 1760);
+
+            ctx.fillStyle = '#E5B84B';
+            ctx.font = 'bold 34px Oswald, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('BAYERN MUNICH DNA • VISUAL VAULT', 540, 1420);
+
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = 'bold 110px Oswald, sans-serif';
+            ctx.fillText(title, 540, 1550);
+
+            ctx.fillStyle = '#9494A8';
+            ctx.font = '600 36px Inter, sans-serif';
+            ctx.fillText(subtitle, 540, 1625);
+
+            const link = document.createElement('a');
+            link.download = `${title.toLowerCase().replace(/\s+/g, '-')}-wallpaper.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            showToast(`Downloaded ${title} 4K Wallpaper!`);
+        };
+
+        /* ==========================================
+           5. HALL OF FAME TOP 10 & UI LOGIC
+           ========================================== */
+        const recordsTabsEl = document.getElementById('recordsTabs');
+        const recordsListEl = document.getElementById('recordsList');
+        const recordsNoteEl = document.getElementById('recordsNote');
+        const categoryKeys = Object.keys(TOP_10_RECORDS);
+
+        recordsTabsEl.innerHTML = categoryKeys.map((key, idx) => `
+            <button class="filter-tab ${idx === 0 ? 'active' : ''}" data-rec="${key}">
+                ${TOP_10_RECORDS[key].icon} Top 10 ${key}
+            </button>
+        `).join('');
+
+        function renderTop10(category) {
+            const catObj = TOP_10_RECORDS[category];
+            const maxVal = catObj.data[0][1];
+            recordsListEl.innerHTML = catObj.data.map((item, idx) => {
+                const pct = Math.round((item[1] / maxVal) * 100);
+                return `
+                    <div class="top10-row rank-${idx + 1}">
+                        <div class="top10-fill" data-w="${pct}"></div>
+                        <span class="top10-rank">#${idx + 1}</span>
+                        <div class="top10-player"><b>${item[0]}</b><small>${item[2]}</small></div>
+                        <span class="top10-val">${item[1]}</span>
+                    </div>
+                `;
+            }).join('');
+            recordsNoteEl.innerHTML = `<strong>${catObj.sub}</strong><br>${catObj.note}`;
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    recordsListEl.querySelectorAll('.top10-fill').forEach(bar => bar.style.width = bar.getAttribute('data-w') + '%');
+                }, 40);
+            });
+        }
+        renderTop10('Goalscorers');
+        recordsTabsEl.addEventListener('click', (e) => {
+            const btn = e.target.closest('button[data-rec]');
+            if (!btn) return;
+            recordsTabsEl.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderTop10(btn.getAttribute('data-rec'));
+        });
+
+        const ARTICLES_DB = [
+            { tag: "History", title: "The Olympiastadion Era: A Look Back", meta: "By Bayern DNA Editorial • 5 min read", body: "<p style='margin-bottom:1rem;'>From 1972 to 2005, the tented roof of Munich's Olympiastadion witnessed the birth of a European superpower. Built for the 1972 Summer Olympics, its sweeping acrylic-glass canopy became the backdrop for Franz Beckenbauer, Gerd Müller, and Sepp Maier as they conquered Europe three consecutive times between 1974 and 1976.</p><p>Even on freezing winter nights in Bavaria, the stadium held an unmistakable aura that shaped generations of supporters before the move to the Allianz Arena.</p>" },
+            { tag: "Tactics", title: "Deconstructing Kompany's Positional Firepower", meta: "By Bayern DNA Editorial • 8 min read", body: "<p style='margin-bottom:1rem;'>After smashing the Bundesliga scoring record in 2025/26 with 122 goals and opening Matchday 6 of the 2026/27 campaign with a 6-1 demolition of RB Leipzig, Vincent Kompany's positional structure has turned Bayern into Europe's most relentless attacking machine.</p><p>With Joshua Kimmich and Aleksandar Pavlović dictating tempo from the double pivot and fullbacks Konrad Laimer and Nathaniel Brown inverting into half-spaces, wide forwards Luis Díaz and Michael Olise are consistently isolated in 1v1 duels while Harry Kane drops deep to link play and finish clinically.</p>" },
+            { tag: "Culture", title: "Südkurve: The Beating Heart of the Arena", meta: "By Bayern DNA Editorial • 4 min read", body: "<p style='margin-bottom:1rem;'>Behind the southern goal of the Allianz Arena stands the Südkurve—blocks 109 to 117—where choreography, flags, and 90 minutes of relentless chanting set the pulse for FC Bayern.</p><p>More than just a section of the stadium, the Südkurve acts as the guardian of club traditions, ensuring that fan culture and club identity remain inseparable.</p>" }
+        ];
+        document.querySelectorAll('#storiesGrid .story-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const art = ARTICLES_DB[+card.getAttribute('data-idx')];
+                if (!art) return;
+                document.getElementById('modalTag').innerText = art.tag;
+                document.getElementById('modalTitle').innerText = art.title;
+                document.getElementById('modalMeta').innerText = art.meta;
+                document.getElementById('modalContent').innerHTML = art.body;
+                document.getElementById('articleModal').style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        window.closeArticle = function() {
+            document.getElementById('articleModal').style.display = 'none';
+            document.body.style.overflow = '';
+        };
+
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileBtn.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('active'); mobileBtn.innerHTML = '☰'; }));
+
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        try { html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark'); } catch (e) {}
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            try { localStorage.setItem('theme', newTheme); } catch (e) {}
+        });
+
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); }), { threshold: 0.1 });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        const counters = document.querySelectorAll('.stat-number');
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = +entry.target.getAttribute('data-target');
+                    let current = 0;
+                    const inc = target / 70;
+                    const update = () => {
+                        current += inc;
+                        if (current < target) { entry.target.innerText = Math.ceil(current); requestAnimationFrame(update); }
+                        else { entry.target.innerText = target; }
+                    };
+                    update();
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        const storyTabs = document.querySelectorAll('#storyTabs .filter-tab');
+        const storyCards = document.querySelectorAll('.story-card');
+        storyTabs.forEach(tab => tab.addEventListener('click', () => {
+            storyTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const filter = tab.getAttribute('data-filter');
+            storyCards.forEach(c => c.style.display = (filter === 'all' || c.getAttribute('data-category') === filter) ? 'flex' : 'none');
+        }));
+
+        const facts = [
+            "October 17, 2026: Luis Díaz scores a stunning hat-trick as Bayern crush RB Leipzig 6-1 at the Allianz Arena to go top of the Bundesliga.",
+            "May 2026: Harry Kane wins his third consecutive Bundesliga Torjägerkanone (36 goals) as Bayern set a league record with 122 goals in 2025/26.",
+            "May 25, 2013: Arjen Robben scores the 89th-minute winner at Wembley to secure the Treble.",
+            "May 23, 2001: Oliver Kahn's penalty shootout heroics win the Champions League in Milan.",
+            "August 23, 2020: Kingsley Coman heads home the winner against PSG to complete the sextuple season."
+        ];
+        const otdTextEl = document.getElementById('otdText');
+        function setRandomFact() { otdTextEl.innerText = facts[Math.floor(Math.random() * facts.length)]; }
+        setRandomFact();
+        document.getElementById('nextFactBtn').addEventListener('click', setRandomFact);
+
+        function showToast(message) {
+            const toast = document.getElementById('toastNotification');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3200);
+        }
+        function handleNewsletter(e) { e.preventDefault(); showToast("Successfully subscribed to Bayern DNA!"); e.target.reset(); }
+        function handleContact(e) { e.preventDefault(); showToast("Message sent! We'll reply soon."); e.target.reset(); }
+        document.getElementById('currentYear').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>
